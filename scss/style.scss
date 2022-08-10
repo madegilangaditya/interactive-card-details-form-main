@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+$font:'Space Grotesk', sans-serif;
+
+$red: hsl(0, 100%, 66%);
+$gradient1: hsl(249, 99%, 64%);
+$gradient2: hsl(278, 94%, 30%);
+
+$white:hsl(0, 0%, 100%);
+$neutral1: hsl(270, 3%, 87%);
+$neutral2: hsl(279, 6%, 55%);
+$neutral3: hsl(278, 68%, 11%);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font: 500 1rem/1.5 $font;
+}
+
+img{
+    width: 100%;
+}
+
+.p-relative{
+    position: relative;
+}
+
+.card-wrapper{
+    background-image: url(../images/bg-main-mobile.png);
+    padding: 32px 16px 0;
+
+    .ccv{
+        position: absolute;
+        top: 67px;
+        right: 40px;
+        font-size: 0.813rem;
+        color: $white;
+    }
+
+    .card-back{
+        text-align: right;
+        
+        img{
+            width: 285px;
+        }
+    }
+}
