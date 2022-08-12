@@ -19,7 +19,7 @@
             <span class="ccv">000</span>
           </div>
           <div class="card-front p-relative">
-            <img src="./images/bg-card-front.png" alt="Card Front">
+            <img src="./images/bg-card-front.png" alt="Card Front" class="front-card-img">
             <img src="./images/card-logo.svg" alt="Logo" class="card-logo">
             <span class="card-number">0000 0000 0000 0000</span>
             <div class="card-holder-wrapper">
@@ -40,10 +40,12 @@
             </div>
             <div class="form-group">
               <div class="form-col-2">
-                <label for="card-month">Exp. Date (MM/YY)</label>
                 <div class="card-expired-wrap">
-                  <input type="number" placeholder="MM" id="card-month">
-                  <input type="number" placeholder="YY" id="card-year">
+                  <label for="card-month">Exp. Date (MM/YY)</label>
+                  <div class="card-expired-input-wrap">
+                    <input type="number" placeholder="MM" id="card-month">
+                    <input type="number" placeholder="YY" id="card-year">
+                  </div>
                 </div>
                 <div class="card-cvc-wrap">
                   <label for="card-cvc">CVC</label>
@@ -52,7 +54,7 @@
               </div>
             </div>
             <div class="form-group">
-              <input type="submit" value="Confirm">
+              <input type="submit" value="Confirm" class="btn">
             </div>
           </form>
           <div class="thankyou">

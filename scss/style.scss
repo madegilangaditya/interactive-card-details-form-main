@@ -13,14 +13,23 @@ $neutral3: hsl(278, 68%, 11%);
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     font: 500 1rem/1.5 $font;
+    color: hsl(278, 68%, 11%);
+    letter-spacing: 1px;
 }
 
 img{
     width: 100%;
+}
+
+input::placeholder{
+    color: $neutral2;
+    font: 500 1rem/1.5 $font;
+    letter-spacing: 1px;
 }
 
 .p-relative{
@@ -53,6 +62,11 @@ img{
     .card-front{
         margin-top: -75px;
         margin-bottom: -45px;
+
+        .front-card-img{
+            box-shadow: 0px 5px 29px 0px #00000061;
+            border-radius: 6px;
+        }
 
         img{
             width: 285px;
@@ -95,5 +109,66 @@ img{
         max-width: 400px;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+.form-wrapper{
+    padding: 90px 24px 45px;
+    .form-group{
+        margin-bottom: 20px;
+
+        label{
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.875rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input{
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid $neutral2;
+            padding: 14px;
+        }
+    }
+
+    .form-col-2{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+
+        > div{
+            width: 48%;
+        }
+    }
+
+    .card-expired-input-wrap{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        input{
+            width: 46.5%;
+        }
+    }
+
+    .card-cvc-wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .btn{
+        background-color: $neutral3;
+        color: $white;
+        padding: 19px 14px;
+        border: none;
+        transition: background-color .3s ease-out;
+
+        &:hover{
+            background-color: $gradient2;
+        }
     }
 }
