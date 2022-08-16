@@ -128,8 +128,15 @@ input::placeholder{
         input{
             width: 100%;
             border-radius: 8px;
-            border: 1px solid $neutral2;
+            border: 0px solid $neutral2;
             padding: 14px;
+            // border-image-slice: 1;
+
+            // &[type='text']:active,
+            // &[type='text']:focus,
+            // &[type='text']:hover{
+            //     border-image-source: linear-gradient(to right, $gradient1, $gradient2);
+            // }
         }
     }
 
@@ -150,7 +157,7 @@ input::placeholder{
         flex-wrap: wrap;
         justify-content: space-between;
 
-        input{
+        & > div{
             width: 46.5%;
         }
     }
@@ -172,3 +179,19 @@ input::placeholder{
         }
     }
 }
+
+.outline-hover{
+    background:$neutral2;
+    padding:1px;
+    border-radius:8px
+}
+
+.outline-hover:active, 
+.outline-hover:focus, 
+.outline-hover:hover, 
+.outline-hover:focus-visible{
+   background-image: linear-gradient(to right, hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%));
+    border-radius: 8px;
+    padding: 1px; 
+}
+
