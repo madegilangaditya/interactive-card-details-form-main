@@ -16,7 +16,7 @@ $neutral3: hsl(278, 68%, 11%);
     box-sizing: border-box;
 }
 
-body{
+body, input{
     font: 500 1rem/1.5 $font;
     color: hsl(278, 68%, 11%);
     letter-spacing: 1px;
@@ -130,13 +130,15 @@ input::placeholder{
             border-radius: 8px;
             border: 0px solid $neutral2;
             padding: 14px;
-            // border-image-slice: 1;
+        }
 
-            // &[type='text']:active,
-            // &[type='text']:focus,
-            // &[type='text']:hover{
-            //     border-image-source: linear-gradient(to right, $gradient1, $gradient2);
-            // }
+        .error{
+            background-color: $red;
+        }
+
+        .error-msg{
+            color: $red;
+            font-size: 0.75rem;
         }
     }
 
