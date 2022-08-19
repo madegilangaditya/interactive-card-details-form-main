@@ -162,11 +162,19 @@ input::placeholder{
         & > div{
             width: 46.5%;
         }
+
+        .card-expired-wrap{
+            .error-msg{
+                position: absolute;
+                left: 0;
+            }
+        }
     }
 
     .card-cvc-wrap{
         display: flex;
         flex-direction: column;
+
     }
     
     .btn{
@@ -175,6 +183,7 @@ input::placeholder{
         padding: 19px 14px;
         border: none;
         transition: background-color .3s ease-out;
+        margin-top: 10px;
 
         &:hover{
             background-color: $gradient2;
