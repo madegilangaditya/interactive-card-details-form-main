@@ -16,7 +16,7 @@ $neutral3: hsl(278, 68%, 11%);
     box-sizing: border-box;
 }
 
-body, input{
+body, input, button{
     font: 500 1rem/1.5 $font;
     color: hsl(278, 68%, 11%);
     letter-spacing: 1px;
@@ -181,10 +181,13 @@ input::placeholder{
     .btn{
         background-color: $neutral3;
         color: $white;
-        padding: 19px 14px;
+        padding: 14px 14px;
         border: none;
         transition: background-color .3s ease-out;
         margin-top: 10px;
+        width: 100%;
+        border-radius: 8px;
+        border: 0px solid #8e8593;
 
         &:hover{
             background-color: $gradient2;
