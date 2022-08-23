@@ -7,20 +7,19 @@ const cardYear = document.querySelector('#card-year');
 const cardCvc = document.querySelector('#card-cvc');
 const btn = document.querySelector('#card-submit-form .btn');
 
-inp.forEach((item, index)=>{
+inp.forEach((item)=>{
     item.addEventListener('focusout', inputChecker);
 })
 
+cardNumber.addEventListener('keyup', cardNumberCheck);
+cardName.addEventListener('keyup', cardNameCheck);
+cardMonth.addEventListener('keyup', cardMonthCheck);
+cardYear.addEventListener('keyup', cardYearCheck);
+cardCvc.addEventListener('keyup', cardCvcCheck);
 
 
 function inputChecker(event){
-    console.log(cardNumber.value);
-    console.log(cardName.value);
-    console.log(cardMonth.value);
-    console.log(cardYear.value);
-    console.log(cardCvc.value);
-    
-    let numbers = /^[0-9]+$/;
+    let numbers = /^[0-9 ]+$/;
     if(event.target.value == ''){
         event.target.parentElement.classList.add('error');
         event.target.parentElement.nextElementSibling ? event.target.parentElement.nextElementSibling.textContent = "Can't be blank" : event.target.parentElement.insertAdjacentHTML("afterend",
@@ -32,11 +31,9 @@ function inputChecker(event){
         "<span class='error-msg'>Wrong format, numbers only</span>");
         disableBtn();  
     }else if(event.target.parentElement.classList.contains('error')){ 
-        
         event.target.parentElement.classList.remove('error');
         event.target.parentElement.nextElementSibling.remove();
         disableBtn();
-        
     }else{
         disableBtn();
     }
@@ -50,4 +47,31 @@ function disableBtn(){
         btn.removeAttribute('disabled');
         console.log('test 1');
     }
+}
+
+function cardNumberCheck(e){
+    const changeTarget = document.querySelector('.card-front .card-number');
+    e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+    let endValue = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+    changeTarget.textContent = endValue;
+}
+
+function cardNameCheck(e){
+    const changeTarget = document.querySelector('.card-front .card-name');
+    changeTarget.textContent = e.target.value;
+}
+
+function cardMonthCheck(e){
+    const changeTarget = document.querySelector('.card-front .card-month');
+    changeTarget.textContent = e.target.value;
+}
+
+function cardYearCheck(e){
+    const changeTarget = document.querySelector('.card-front .card-year');
+    changeTarget.textContent = e.target.value;
+}
+
+function cardCvcCheck(e){
+    const changeTarget = document.querySelector('.card-back .cvc');
+    changeTarget.textContent = e.target.value;
 }

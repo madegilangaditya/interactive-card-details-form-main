@@ -42,7 +42,7 @@ input::placeholder{
     background-repeat: no-repeat;
     background-size: cover;
 
-    .ccv{
+    .cvc{
         position: absolute;
         top: 67px;
         right: 40px;
@@ -133,6 +133,14 @@ input::placeholder{
             padding: 14px;
         }
 
+        #card-number{
+            text-transform: uppercase;
+
+            &::placeholder{
+                text-transform: none;
+            }
+        }
+
         .error{
             background-color: $red;
         }
@@ -175,7 +183,6 @@ input::placeholder{
     .card-cvc-wrap{
         display: flex;
         flex-direction: column;
-
     }
     
     .btn{
