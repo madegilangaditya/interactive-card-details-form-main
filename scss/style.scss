@@ -83,7 +83,7 @@ input::placeholder{
             position: absolute;
             left: 18px;
             color: white;
-            bottom: 50px;
+            bottom: 60px;
             font-size: 18px;
             letter-spacing: 2px;
         }
@@ -94,7 +94,7 @@ input::placeholder{
             display: flex;
             justify-content: space-between;
             width: 245px;
-            bottom: 19px;
+            bottom: 30px;
             left: 18px;
             font-size: 12px;
             text-transform: uppercase;
@@ -195,6 +195,8 @@ input::placeholder{
         width: 100%;
         border-radius: 8px;
         border: 0px solid #8e8593;
+        text-decoration: none;
+        display: block;
 
         &:hover{
             background-color: $gradient2;
@@ -221,3 +223,23 @@ input::placeholder{
     padding: 1px; 
 }
 
+.thankyou{
+    text-align: center;
+
+    h2{
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        letter-spacing: 4px;
+        font-size: 1.875rem;
+    }
+
+    img{
+        width: 80px;
+        margin-bottom: 35px;
+    }
+
+    p{
+        margin-bottom: 45px;
+        color: $neutral2;
+    }
+}
