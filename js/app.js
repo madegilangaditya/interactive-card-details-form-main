@@ -6,6 +6,7 @@ const cardMonth = document.querySelector('#card-month');
 const cardYear = document.querySelector('#card-year');
 const cardCvc = document.querySelector('#card-cvc');
 const btn = document.querySelector('#card-submit-form .btn');
+const thankyou = document.querySelector('.thankyou');
 
 inp.forEach((item)=>{
     item.addEventListener('focusout', inputChecker);
@@ -16,6 +17,7 @@ cardName.addEventListener('keyup', cardNameCheck);
 cardMonth.addEventListener('keyup', cardMonthCheck);
 cardYear.addEventListener('keyup', cardYearCheck);
 cardCvc.addEventListener('keyup', cardCvcCheck);
+btn.addEventListener('click', showThankyou);
 
 
 function inputChecker(event){
@@ -74,4 +76,10 @@ function cardYearCheck(e){
 function cardCvcCheck(e){
     const changeTarget = document.querySelector('.card-back .cvc');
     changeTarget.textContent = e.target.value;
+}
+
+function showThankyou(e){
+    e.preventDefault();
+    thankyou.classList.add('show');
+    document.querySelector('#card-submit-form').classList.add('hide');
 }

@@ -225,6 +225,7 @@ input::placeholder{
 
 .thankyou{
     text-align: center;
+    display: none;
 
     h2{
         text-transform: uppercase;
@@ -242,4 +243,12 @@ input::placeholder{
         margin-bottom: 45px;
         color: $neutral2;
     }
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
 }
