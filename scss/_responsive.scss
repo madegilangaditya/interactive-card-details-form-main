@@ -1,0 +1,33 @@
+@media all and (min-width:768px){
+    section{
+        background-image: url(../images/bg-main-desktop.png);
+        background-repeat: repeat-y;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        padding: 95px 0px 140px 0px;
+        align-items: center;
+        max-width: 1110px;
+        margin: auto;
+    }
+
+    .card-wrapper{
+        background-image: none;
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .card-back,
+        .card-front{
+            max-width: 448px;
+
+            img{
+                width: 448px;
+            }
+        }
+    }
+
+    
+}
