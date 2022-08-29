@@ -200,6 +200,7 @@ input::placeholder{
         border: 0px solid #8e8593;
         text-decoration: none;
         display: block;
+        cursor: pointer;
 
         &:hover{
             background-color: $gradient2;
