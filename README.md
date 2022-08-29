@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/html-css-vanilla-js-validation-sgM7x9HPAh](https://www.frontendmentor.io/solutions/html-css-vanilla-js-validation-sgM7x9HPAh)
 - Live Site URL: [https://madegilangaditya.github.io/interactive-card-details-form-main/](https://madegilangaditya.github.io/interactive-card-details-form-main/)
 
 ## My process
