@@ -2,6 +2,7 @@
     section{
         background-image: url(../images/bg-main-desktop.png);
         background-repeat: repeat-y;
+        background-position: -50%;
     }
 
     .container{
@@ -19,6 +20,70 @@
         display: flex;
         flex-direction: column-reverse;
 
+        // .card-back,
+        // .card-front{
+        //     max-width: 448px;
+
+        //     img{
+        //         width: 448px;
+        //     }
+        // }
+
+        .card-front{
+            margin-bottom: 37px;
+            margin-top: 0;
+            margin-left: 0;
+
+            // .card-logo{
+            //     width: 85px;
+            //     left: 30px;
+            //     top: 28px;
+            // }
+
+            // .card-number,
+            // .card-holder-wrapper{
+            //     left:30px;
+
+            // }
+
+            // .card-holder-wrapper{
+            //     width: calc(94% - 35px);
+            //     font-size: 1.125rem;
+            // }
+
+            // .front-card-img{
+            //     border-radius: 12px;
+            // }
+
+            // .card-number{
+            //     bottom: 75px;
+            //     font-size: 1.875rem;
+            // }
+        }
+
+        .card-back{
+
+            img{
+                border-radius: 12px;
+            }
+        }
+    }
+
+    .form-wrapper {
+        .btn{
+            min-width: 350px;
+        }
+    }
+   
+}
+
+@media all and (min-width:1024px){
+    section{
+        background-position: left;
+    }
+
+    .card-wrapper{
+
         .card-back,
         .card-front{
             max-width: 448px;
@@ -27,7 +92,57 @@
                 width: 448px;
             }
         }
+
+        .card-front{
+            margin-bottom: 37px;
+            margin-top: 0;
+            margin-left: -57.5px;
+
+            .card-logo{
+                width: 85px;
+                left: 30px;
+                top: 28px;
+            }
+
+            .card-number,
+            .card-holder-wrapper{
+                left:30px;
+
+            }
+
+            .card-holder-wrapper{
+                width: calc(94% - 35px);
+                font-size: 0.938rem;
+            }
+
+            .front-card-img{
+                border-radius: 12px;
+            }
+
+            .card-number{
+                bottom: 75px;
+                font-size: 1.875rem;
+            }
+        }
+
+        .card-back{
+
+            img{
+                border-radius: 12px;
+            }
+        }
+
+        .cvc{
+            top: 109px;
+            right: 60px;
+            font-size: 0.938rem;
+        }
+
     }
 
-    
+    .form-wrapper {
+        .btn{
+            min-width: 380px;
+        }
+    }
 }
