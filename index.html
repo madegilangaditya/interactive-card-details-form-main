@@ -49,7 +49,7 @@
                   <div class="card-expired-input-wrap p-relative">
                     <div class="card-expired-wrap">
                       <div class="outline-hover">
-                        <input type="text" placeholder="MM" id="card-month" pattern="\d*" maxlength = "2">
+                        <input type="text" min="1" max="12"  placeholder="MM" id="card-month" pattern="\d*" maxlength = "2">
                       </div>
                     </div>
                     <div class="card-expired-wrap">
@@ -62,7 +62,7 @@
                 <div class="card-cvc-wrap">
                   <label for="card-cvc">CVC</label>
                   <div class="outline-hover">
-                    <input type="number" placeholder="e.g. 123" id="card-cvc">
+                    <input type="text" placeholder="e.g. 123" id="card-cvc" pattern="\d*" maxlength = "3">
                   </div>
                 </div>
               </div>

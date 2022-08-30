@@ -10,6 +10,7 @@ const thankyou = document.querySelector('.thankyou');
 
 inp.forEach((item)=>{
     item.addEventListener('focusout', inputChecker);
+    item.addEventListener('keyup', inputChecker);
 })
 
 cardNumber.addEventListener('keyup', cardNumberCheck);
@@ -22,12 +23,19 @@ btn.addEventListener('click', showThankyou);
 
 function inputChecker(event){
     let numbers = /^[0-9 ]+$/;
+    let text = /[a-z]/i;
+    
     if(event.target.value == ''){
         event.target.parentElement.classList.add('error');
         event.target.parentElement.nextElementSibling ? event.target.parentElement.nextElementSibling.textContent = "Can't be blank" : event.target.parentElement.insertAdjacentHTML("afterend",
         "<span class='error-msg'>Can't be blank</span>");
         disableBtn();
-    }else if((event.target.id == 'card-number' && !event.target.value.match(numbers)) || (event.target.id == 'card-month' && !event.target.value.match(numbers)) || (event.target.id == 'card-year' && !event.target.value.match(numbers)) || (event.target.id == 'card-cvc' && !event.target.value.match(numbers))){
+    }else if(event.target.id == 'card-name' && !event.target.value.match(text)){
+        event.target.parentElement.classList.add('error');
+        event.target.parentElement.nextElementSibling ? event.target.parentElement.nextElementSibling.textContent = "Wrong format, text only" : event.target.parentElement.insertAdjacentHTML("afterend",
+        "<span class='error-msg'>Wrong format, text only</span>");
+        disableBtn();  
+    }else if((event.target.id == 'card-number' && !event.target.value.match(numbers)) || (event.target.id == 'card-cvc' && !event.target.value.match(numbers))){
         event.target.parentElement.classList.add('error');
         event.target.parentElement.nextElementSibling ? event.target.parentElement.nextElementSibling.textContent = "Wrong format, numbers only" : event.target.parentElement.insertAdjacentHTML("afterend",
         "<span class='error-msg'>Wrong format, numbers only</span>");
@@ -65,11 +73,14 @@ function cardNameCheck(e){
 
 function cardMonthCheck(e){
     const changeTarget = document.querySelector('.card-front .card-month');
+    // let month = /^(?:1[0-2]|[1-9])$/;
+    e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').trim();
     changeTarget.textContent = e.target.value;
 }
 
 function cardYearCheck(e){
     const changeTarget = document.querySelector('.card-front .card-year');
+    e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').trim();
     changeTarget.textContent = e.target.value;
 }
 
